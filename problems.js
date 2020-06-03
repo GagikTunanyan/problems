@@ -20,4 +20,12 @@ let func =(nums) =>{
     return nshan + s
 };
 
-console.log(func(-15));
+let func_rec = (num, b) =>{
+  if (num < b) {
+      return num;
+  }
+
+  return func_rec(parseInt(num/b), b) + (num % b).toString();
+};
+
+console.log(func_rec(11,2));
