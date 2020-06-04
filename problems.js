@@ -27,5 +27,3 @@ let func_rec = (num, b) =>{
 
   return func_rec(parseInt(num/b), b) + (num % b).toString();
 };
-
-console.log(func_rec(11,2));
