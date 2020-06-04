@@ -25,4 +25,26 @@ let pascal_triangle = (num) => {
     return push_arr;
 };
 
-console.log(pascal_triangle(100));
+// console.log(pascal_triangle(100));
+
+let pascal_triangle_recursive =(num1) =>{
+  if (num1 === 1) {
+      return [[1]]
+  }
+
+  if (num1 === 2) {
+      return [[1],[1,1]]
+  }
+
+  let yntacik = [1];
+  let arr = pascal_triangle_recursive(num1-1);
+  for (let i = 0; i < arr[arr.length-1].length-1; i++){
+      yntacik.push(arr[arr.length-1][i] + arr[arr.length-1][i+1])
+  }
+
+  yntacik.push(1);
+  arr.push(yntacik);
+  return arr;
+};
+
+// console.log(pascal_triangle_recursive(8));
