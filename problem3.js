@@ -8,3 +8,4 @@ let simple_array_sum = (arr) => {
   return verjin_elem + simple_array_sum(arr)
 };
 // console.log(simple_array_sum([1,2,3,4]));
+
